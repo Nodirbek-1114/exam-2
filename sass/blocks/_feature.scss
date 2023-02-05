@@ -1,0 +1,72 @@
+.feature-wrapper {
+    margin: 160px 0;
+
+    .feature {
+        @include flex(row, center, space-between);
+
+        &__card {
+            @include flex(column, center, flex-start);
+
+            &--top {
+                background-image: url("../../images/contact-img/canada.png");
+                width: 202px;
+                height: 202px;
+            }
+
+            &--top:nth-child(2) {
+                background-image: url("../../images/contact-img/australia.png");
+                width: 202px;
+                height: 202px;
+            }
+
+            &--top:last-child {
+                background-image: url("../../images/contact-img/angliya.png");
+                width: 202px;
+                height: 202px;
+            }
+
+            &--title {
+                @include text(500, 20px, 26px, #333136);
+                letter-spacing: 5px;
+                max-width: 350px;
+                margin: 48px 0 32px 0;
+            }
+
+            &--btn {
+                @include text(500, 15px, 22px, #fff);
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                padding: 17px 18.5px;
+                background: #E7816B;
+                border-radius: 8px;
+                border: none;
+            }
+
+            &--btn:hover {
+                cursor: pointer;
+                background: #FFAD9B;
+            }
+        }
+    }
+}
+
+@media only screen and(max-width: 768px) {
+    .feature-wrapper {
+        margin: 160px 0;
+
+        .feature {
+            @include flex(column, center, space-between);
+            gap: 58px;
+        }
+    }
+}
+
+@media only screen and(max-width: 375px){
+    .feature-wrapper {
+        margin: 160px 0;
+
+        .feature {
+            gap: 48px;
+        }
+    }
+}

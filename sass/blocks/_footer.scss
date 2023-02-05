@@ -1,0 +1,113 @@
+.footer-wrapper {
+    background: #1D1C1E;
+    padding: 144px 0 72px 0;
+
+    .footer {
+
+        &__top {
+            @include flex(row, center, space-between);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 40px;
+
+            &--logo {
+                &-img {}
+            }
+
+            &--ul {
+                @include flex(row, center, flex-start);
+                gap: 42px;
+
+                &-list {
+                    list-style-type: none;
+                }
+
+                &-link {
+                    @include text(400, 14px, 14px, #fff);
+                    letter-spacing: 2px;
+                    text-decoration: none;
+                }
+
+                &-link:hover {
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &__bottom {
+            @include flex(row, flex-end, space-between);
+            margin-top: 31px;
+
+            &--left {
+                @include flex(row, flex-start, space-between);
+                width: 50%;
+
+                .footer__bottom--ul {
+
+                    &-list {
+                        list-style-type: none;
+                    }
+
+                    &-link {
+                        @include text(500, 16px, 26px, rgba(255, 255, 255, 0.5));
+                        text-decoration: none;
+                    }
+
+                    &-active {
+                        @include text(700, 16px, 26px, rgba(255, 255, 255, 0.5));
+                    }
+                }
+
+            }
+
+            &--right {
+                @include flex(row, flex-end, flex-start);
+                gap: 16px;
+
+                .footer__bottom--social:hover {
+                    
+                }
+            }
+        }
+    }
+}
+
+@media only screen and(max-width: 375px) {
+    .footer-wrapper {
+        background: #1D1C1E;
+        padding: 253px 24px 64px 24px;
+
+        .footer {
+            @include flex(column, center, space-between);
+
+            &__top {
+                @include flex(column, center, space-between);
+                border-bottom: none;
+                width: 100%;
+
+                &--logo {
+                    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+                    padding: 32px;
+                }
+
+                &--ul {
+                    @include flex(column, center, space-between);
+                    gap: 32px;
+                    margin-top: 65px;
+                }
+            }
+
+            &__bottom {
+                @include flex(column, center, space-between);
+                margin-top: 40px;
+
+                &--left {
+                    @include flex(column, center, space-between);
+                    gap: 40px;
+                    width: 100%;
+                    margin-bottom: 42px;
+                }
+            }
+        }
+    }
+}

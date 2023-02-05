@@ -1,0 +1,171 @@
+.guide-wrapper {
+
+    .guide {
+        @include flex(row, flex-start, flex-start);
+        text-align: center;
+        gap: 30px;
+        width: 100%;
+
+        &__left {
+
+            &--info {
+
+                &-title {
+                    @include text(500, 40px, 48px, #fff);
+                    letter-spacing: 2px;
+                    position: relative;
+                    top: -367px;
+                }
+
+                &-text {
+                    @include text(500, 15px, 22px, #fff);
+                    letter-spacing: 5px;
+                    text-transform: uppercase;
+                    position: relative;
+                    top: -343px;
+                }
+
+                &-img {
+                    max-width: 541px;
+                    max-height: 640px;
+                }
+            }
+        }
+
+        &__right {
+            @include flex(column, center, flex-start);
+            gap: 24px;
+            text-align: center;
+
+            &--top {
+
+                &-title {
+                    @include text(500, 40px, 48px, #fff);
+                    letter-spacing: 2px;
+                    position: relative;
+                    top: -201px;
+                }
+
+                &-text {
+                    @include text(500, 15px, 22px, #fff);
+                    letter-spacing: 5px;
+                    text-transform: uppercase;
+                    position: relative;
+                    top: -187px;
+                }
+
+                &-img {
+                    max-width: 541px;
+                    max-height: 308px;
+                }
+            }
+
+            &--bottom {
+                position: relative;
+                top: -72px;
+
+                &-title {
+                    @include text(500, 40px, 48px, #fff);
+                    letter-spacing: 2px;
+                    position: relative;
+                    top: -201px;
+                }
+
+                &-text {
+                    @include text(500, 15px, 22px, #fff);
+                    letter-spacing: 5px;
+                    text-transform: uppercase;
+                    position: relative;
+                    top: -187px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and(max-width:768px) {
+    .guide-wrapper {
+
+        .guide {
+            @include flex(column, flex-start, flex-start);
+            text-align: center;
+            gap: 24px;
+            width: 100%;
+
+            &__left {
+
+                &--info {
+
+                    &-title {
+                        @include text(500, 40px, 48px, #fff);
+                        letter-spacing: 2px;
+                        position: relative;
+                        top: -367px;
+                    }
+
+                    &-text {
+                        @include text(500, 15px, 22px, #fff);
+                        letter-spacing: 5px;
+                        text-transform: uppercase;
+                        position: relative;
+                        top: -343px;
+                    }
+
+                    &-img {
+                        max-width: 541px;
+                        max-height: 640px;
+                    }
+                }
+            }
+
+            &__right {
+                @include flex(column, center, flex-start);
+                gap: 24px;
+                text-align: center;
+
+                &--top {
+
+                    &-title {
+                        @include text(500, 40px, 48px, #fff);
+                        letter-spacing: 2px;
+                        position: relative;
+                        top: -201px;
+                    }
+
+                    &-text {
+                        @include text(500, 15px, 22px, #fff);
+                        letter-spacing: 5px;
+                        text-transform: uppercase;
+                        position: relative;
+                        top: -187px;
+                    }
+
+                    &-img {
+                        max-width: 541px;
+                        max-height: 308px;
+                    }
+                }
+
+                &--bottom {
+                    position: relative;
+                    top: -72px;
+
+                    &-title {
+                        @include text(500, 40px, 48px, #fff);
+                        letter-spacing: 2px;
+                        position: relative;
+                        top: -201px;
+                    }
+
+                    &-text {
+                        @include text(500, 15px, 22px, #fff);
+                        letter-spacing: 5px;
+                        text-transform: uppercase;
+                        position: relative;
+                        top: -187px;
+                    }
+                }
+            }
+        }
+    }
+}

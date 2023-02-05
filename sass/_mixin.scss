@@ -1,0 +1,42 @@
+@mixin flex($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin bg($url, $repeat, $position) {
+  background-image: ($url);
+  background-repeat: $repeat;
+  background-position: $position;
+}
+
+@mixin psevdoEl($width, $height, $position, $top, $left) {
+  position: $position;
+  top: $top;
+  left: $left;
+  display: inline-block;
+  width: $width;
+  height: $height;
+  content: "";
+}
+
+@mixin text($fw, $fs, $lh, $tc) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  color: $tc;
+}
+
+@mixin btn($bg, $br, $b, $p){
+  background-color: $bg;
+  border-radius: $br;
+  border: $b;
+  padding: $p;
+}
+
+%list-unstyled {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}

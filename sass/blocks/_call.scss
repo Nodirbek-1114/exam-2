@@ -1,0 +1,62 @@
+.call-wrapper {
+    position: relative;
+    bottom: -60px;
+
+    .call {
+        @include flex(row, center, space-between);
+        background: #E7816B;
+        border-radius: 15px;
+        padding: 76px 96px 46px 95px;
+
+        &__left {
+
+            &--title {
+                max-width: 268px;
+                @include text(500, 40px, 40px, #fff);
+            }
+
+            &--text {
+                max-width: 459px;
+                @include text(400, 16px, 26px, #fff);
+                margin-top: 5px;
+            }
+        }
+
+        &__btn {
+            @include btn(#fff, 8px, none, 17px 25px);
+            @include text(500, 15px, 22px, #333136);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        &__btn:active{
+            background: #FFAD9B;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+}
+
+@media only screen and(max-width: 768px){
+    .call-wrapper {
+        position: relative;
+        bottom: -60px;
+    
+        .call {
+            @include flex(column, center, center);
+            gap: 32px;
+            padding: 57px 59px;
+    
+            &__left {
+    
+                &--title {
+                    text-align: center;
+                }
+    
+                &--text {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
